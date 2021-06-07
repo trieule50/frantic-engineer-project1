@@ -13,7 +13,20 @@ Project 1's task is to create a game with the following requirements:
 ## Project Schedule 
 
 The overall schedule of project 1: 
-
+![image](https://media.git.generalassemb.ly/user/36270/files/87151c80-c79e-11eb-9408-a2f945389690)
 
 The estimated and actual schedule of day 1:
 
+## User Stories
+
+## Wireframes
+
+![image](https://media.git.generalassemb.ly/user/36270/files/95fbcf00-c79e-11eb-952b-d36f37edf09e)
+
+![image](https://media.git.generalassemb.ly/user/36270/files/55914800-c6ef-11eb-8af2-4f6a44556412)
+
+![image](https://media.git.generalassemb.ly/user/36270/files/604bdd00-c6ef-11eb-8cb1-83684a3993e0)
+
+## Time/Priority Matrix
+
+![image](https://media.git.generalassemb.ly/user/36270/files/7f557800-c79e-11eb-9e02-8b82276be559)
