@@ -16,8 +16,15 @@ The overall schedule of project 1:
 ![image](https://media.git.generalassemb.ly/user/36270/files/87151c80-c79e-11eb-9408-a2f945389690)
 
 The estimated and actual schedule of day 1:
+![image](https://media.git.generalassemb.ly/user/36270/files/3225d600-c79f-11eb-9b7b-32e66e938a0b)
 
 ## User Stories
+
+1. As a player, I want a two player game, either with the computer or another player, so that the game is a challenge.
+2. As a player, I want to be able to know if I win or lose the game, so that I know when the game is finish.
+3. As a player, I want a game that has multiple rounds so that I can play multiple times.
+4. As a player, I want to understand the rules before playing, so that I have a clear understand on how to win or lose.
+5. As a player, I want to have a game that is visually appealing, so that it is entertaining to play. (Stretch Goals)
 
 ## Wireframes
 
