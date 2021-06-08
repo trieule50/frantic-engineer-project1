@@ -17,7 +17,13 @@ Can you help the engineer in submitting the bid proposal on time?
 - CSS
 - JavaScript
 
-## Learning Objectives
+## Learning Learned
+
+## Problem Areas 
+
+## Future Directions
+
+## Accomplishments 
 
 ## Citation
 [History of Snake](https://www.itsnicethat.com/features/taneli-armanto-the-history-of-snake-design-legacies-230221)
