@@ -4,20 +4,49 @@ body{
     background-image: url('https://t4.ftcdn.net/jpg/03/02/11/35/360_F_302113529_3ze1r8JC3FnMuQfnY18fOSCIu1sQrZFk.jpg');
 }
 h1{
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(76, 194, 127);
+}
+
+p{
+    line-height: 24px;;
 }
 .statsBoard{
     padding: 25px;
 }
 
+.modal {
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 750px;
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-content: center;
+    border: 5px solid slateblue;
+}
+.modal_contents{
+    background-color: white;
+}
+.hidden{
+    display: none;
+}
+
 .countDown, .collected{
     padding: 15px;
     background-color: rgb(246, 246, 246);
-    opacity: .85;
 }
 .engineer img{
     max-width: 45px;
     max-height: 45px;
+}
+
+.startButton{
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: rgb(76, 194, 127);
 }
 
 .parent{
@@ -26,12 +55,11 @@ h1{
     grid-template-rows: repeat(10, 50px);
     justify-content: center;
     align-items: center;
-    background-color: rgb(246, 246, 246);
-    opacity: .85;
 }
 
 .child{
     width: 50px;
     height: 50px;
+    background-color: rgb(246, 246, 246);
     /* border: 1px solid black; */
 }

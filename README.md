@@ -17,9 +17,25 @@ Can you help the engineer in submitting the bid proposal on time?
 - CSS
 - JavaScript
 
-## Learning Learned
+## Learning Experience
+
+### Setting Up Project Worksheet
+Refer to the project-worksheet markdown to read over the:
+- Overall Project Description 
+- Estimate and Actual Project Schedule
+- User Stories
+- Wireframes
+- Time/Priority Matrix
+
+### Setting Up Core Structure
+
+#### Setting Up A Game Area
+- First, with the help of HTML, set up a container.  
+
+### Focusing on User Experience
 
 ## Problem Areas 
+- The problem area was making the engineer move.
 
 ## Future Directions
 
