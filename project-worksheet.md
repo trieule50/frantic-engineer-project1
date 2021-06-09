@@ -40,3 +40,18 @@ The estimated and actual schedule of day 2:
 ## Time/Priority Matrix
 
 ![image](https://media.git.generalassemb.ly/user/36270/files/7f557800-c79e-11eb-9e02-8b82276be559)
+
+## MVP 
+1. Create a win logic
+    (Win = collect all the papers before time runs out.)
+2. Create Grid Display
+3. Create Classes
+4. Styling Games
+5. Creating Modal
+6. interactive in DOM
+
+
+## Post-MVP / Stretch Goals
+1. Have a 'snake' tail
+    Append the papers behind the engineer
+2. Animation
