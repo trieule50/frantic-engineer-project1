@@ -14,7 +14,7 @@ p{
     padding: 25px;
 }
 
-.modal {
+.modal, .winModal{
     position: absolute;
     top: 0;
     height: 300px;
@@ -25,7 +25,19 @@ p{
     align-content: center;
     border: 5px solid slateblue;
 }
-.modal_contents{
+
+.loseModal{
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-content: center;
+    border: 5px solid slateblue;
+}
+.modal_contents, .winModal_contents, .loseModal_contents {
     background-color: white;
 }
 .hidden{
@@ -47,6 +59,14 @@ p{
     font-size: 20px;
     font-family: 'Press Start 2P', sans-serif;
     background-color: rgb(76, 194, 127);
+}
+
+.resetWin, .resetLose{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: steelblue;
 }
 
 .parent{

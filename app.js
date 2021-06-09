@@ -11,6 +11,10 @@ const gridParent = document.querySelector('.parent');
 const statsBoard = document.querySelector('.statsBoard')
 const startButton = document.querySelector('.startButton');
 const modal = document.querySelector('.modal');
+const winModal = document.querySelector('.winModal');
+const loseModal = document.querySelector('.loseModal');
+const resetWin = document.querySelector('.resetWin')
+const resetLose = document.querySelector('.resetLose')
 
 //For Loop to create div child grid//
 
@@ -62,9 +66,12 @@ class Player {
             console.log(time)
             this.timer --;
             this.updateStats();
-            if (this.timer === 0){
+            if (this.collectedItems >=94 && this.timer >= 0){
                 clearInterval(time);
-                console.log('Time Up!');
+                toggleWinModal();
+            }else if(this.collectedItems < 94 && this.timer <= 0){
+                clearInterval(time);
+                toggleLoseModal();
             }
         }, 1000);
     }
@@ -85,7 +92,6 @@ class Player {
         <div class="collected">Sheets Collected: ${this.collectedItems}/94 Sheets</div>
         `
     }
-
 }
 
 const engineer = new Player('engineer');
@@ -139,6 +145,17 @@ const toggleModal = () =>{
     modal.classList.toggle('hidden');
 }
 
+// FUNCTION TO DISPLAY WIN OR LOSE LOGIC
+const toggleWinModal = () =>{
+    winModal.classList.toggle('hidden');
+}
+const toggleLoseModal = () =>{
+    loseModal.classList.toggle('hidden');
+}
+
+//Reset
+
+
 /* =============================
     EVENT LISTENERS
 ============================= */
@@ -148,3 +165,11 @@ window.addEventListener('load', GAME)
 window.addEventListener('keydown', CONTROL);
 
 startButton.addEventListener('click', toggleModal)
+
+resetWin.addEventListener('click', function(){
+    window.location.reload();
+})
+
+resetLose.addEventListener('click', function(){
+    window.location.reload();
+})
