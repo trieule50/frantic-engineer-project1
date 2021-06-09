@@ -68,20 +68,39 @@ With the individual class name, append the figure to the individual div item.
         ...
 
 #### Setting Up To Spawn Papers
+Similar to the snake game, the sheets of proposal needs to be randomize in the grid. 
+
+    let paper = Math.floor(Math.random()*100);
+    document.querySelector(`.child${paper}`).appendChild(spawnPaper);
 
 #### Setting Up A Function to "Collect" Papers
+The logic used to create the function to "collect" papers was that if the engineer and the sheet of paper shared the same parent class then points will be added and that the sheet of paper will be remove and then regenerated elsewhere. 
+
+    if(player.parentElement.getAttribute('class') === single.parentElement.getAttribute('class')){
+            this.collectedItems++;
+            this.updateStats();
+            single.remove();
+            let paper = Math.floor(Math.random()*100);
+            document.querySelector(`.child${paper}`).appendChild(spawnPaper);
+        }
 
 #### Setting Up A Win Logic
 
+Frantic engineer is a game against the clock. To win, the player will need to collect all 94 sheets within the 200 seconds. 
+
 ### Focusing on User Experience
+
 
 ## Problem Areas 
 - First lesson learned was from setting up the function to move the engineer is that KeyDown is a global event listener (i.e. = window and not document.querySelector).
-- Second lesson learned was from setting up a function to "collect" papers.
+- Second lesson learned was from setting up a function to "collect" papers. The main issue was to understand the type of event listener that was attached to a function. For instance, the 'collect function was on the 'window load' which invoke the function everytime the window load. 
+- Third lesson learned was understanding the edge condition. 
 
 ## Future Directions
 
 ## Accomplishments 
+- Frantic Engineer is a functionally game! 
+- Understand the importance of scope. 
 
 ## Citation
 [History of Snake](https://www.itsnicethat.com/features/taneli-armanto-the-history-of-snake-design-legacies-230221)
