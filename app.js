@@ -15,7 +15,8 @@ const winModal = document.querySelector('.winModal');
 const loseModal = document.querySelector('.loseModal');
 const resetWin = document.querySelector('.resetWin');
 const resetLose = document.querySelector('.resetLose');
-const outOfBound = document.querySelector('outOfBoundModal');
+const outOfBound = document.querySelector('.outOfBoundModal');
+const resetOutOfBound = document.querySelector('.resetOutOfBound');
 
 //For Loop to create div child grid//
 
@@ -109,34 +110,54 @@ const GAME = () => {
     engineer.createBoard();
 }
 
+const toggleOutOfBound = () =>{
+    outOfBound.classList.toggle('hidden');
+}
+
 //FUNCTION TO MOVE THE ENGINEER
 let position = 0;
 const CONTROL = (event) =>{
     event.preventDefault();
     console.log(event.keyCode);
+    //up key (-10 of grid position)
     if(event.keyCode === 38){
-        //up key (-10 of grid position)
-        position-=10;
-        document.querySelector(`.child${position}`).appendChild(figure);
-        console.log(document.querySelector(`.child${position}`))
+        if(position >=0 && position <=10){
+            toggleOutOfBound();
+        }else{
+            position-=10;
+            document.querySelector(`.child${position}`).appendChild(figure);
+            // console.log(document.querySelector(`.child${position}`))
+        }
     }
+    //right key (+1 of grid position)
     if(event.keyCode === 39){
-        //right key (+1 of grid position)
-        position++;
-        document.querySelector(`.child${position}`).appendChild(figure);
-        console.log(document.querySelector(`.child${position}`));
+        if((position+1) % 10 === 0){
+            toggleOutOfBound();
+        }else{
+            position++;
+            document.querySelector(`.child${position}`).appendChild(figure);
+        // console.log(document.querySelector(`.child${position}`));
         }
+    }
+    //down key (+10 of grid position)
     if(event.keyCode === 40){
-        //down key (+10 of grid position)
-        position+=10;
-        document.querySelector(`.child${position}`).appendChild(figure);
-        console.log(document.querySelector(`.child${position}`))
+        if(position >= 90 && position <=100){
+            toggleOutOfBound();
+        }else{
+            position+=10;
+            document.querySelector(`.child${position}`).appendChild(figure);
+            // console.log(document.querySelector(`.child${position}`))
         }
+    }
+    //left key (-1 of grid position)
     if(event.keyCode === 37){
-        //left key (-1 of grid position)
-        position--;
-        document.querySelector(`.child${position}`).appendChild(figure);
-        console.log(document.querySelector(`.child${position}`))
+        if(position % 10 === 0){
+            toggleOutOfBound();
+        }else{
+            position--;
+            document.querySelector(`.child${position}`).appendChild(figure);
+            // console.log(document.querySelector(`.child${position}`))
+        }
     }
     engineer.increaseSheets();
 }
@@ -152,10 +173,6 @@ const toggleWinModal = () =>{
 }
 const toggleLoseModal = () =>{
     loseModal.classList.toggle('hidden');
-}
-
-const toggleOutOfBound = () =>{
-    outOfBound.classList.toggle('hidden');
 }
 
 
@@ -175,5 +192,9 @@ resetWin.addEventListener('click', function(){
 })
 
 resetLose.addEventListener('click', function(){
+    window.location.reload();
+})
+
+resetOutOfBound.addEventListener('click', function(){
     window.location.reload();
 })

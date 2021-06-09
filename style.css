@@ -37,7 +37,18 @@ p{
     align-content: center;
     border: 5px solid slateblue;
 }
-.modal_contents, .winModal_contents, .loseModal_contents {
+.outOfBoundModal{
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-content: center;
+    border: 5px solid slateblue;
+}
+.modal_contents, .winModal_contents, .loseModal_contents, .outOfBoundModal_contents {
     background-color: white;
 }
 .hidden{
@@ -67,6 +78,18 @@ p{
     background-color: rgb(76, 194, 127);
 }
 
+.resetWin, .resetLose, .resetOutOfBound{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: steelblue;
+}
+.resetWin:hover, .resetLose:hover, .resetOutOfBound{
+    background-color: rgb(202, 69, 69);
+    animation: shake .5s infinite;
+}
+
 @keyframes shake {
     0%{
         transform: rotate(0deg);
@@ -86,18 +109,6 @@ p{
     100%{ 
         transform: rotate(0deg);
     }
-}
-
-
-.resetWin, .resetLose{
-    height: 50px;
-    width: 150px;
-    font-size: 20px;
-    font-family: 'Press Start 2P', sans-serif;
-    background-color: steelblue;
-}
-.resetWin:hover, .resetLose:hover{
-    background-color: rgb(202, 69, 69);
 }
 
 .parent{
