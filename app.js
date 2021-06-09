@@ -13,8 +13,9 @@ const startButton = document.querySelector('.startButton');
 const modal = document.querySelector('.modal');
 const winModal = document.querySelector('.winModal');
 const loseModal = document.querySelector('.loseModal');
-const resetWin = document.querySelector('.resetWin')
-const resetLose = document.querySelector('.resetLose')
+const resetWin = document.querySelector('.resetWin');
+const resetLose = document.querySelector('.resetLose');
+const outOfBound = document.querySelector('outOfBoundModal');
 
 //For Loop to create div child grid//
 
@@ -50,7 +51,7 @@ class Player {
     constructor(name, collectedItems, timer){
         this.name = name;
         this.collectedItems = 0;
-        this.timer = 200;
+        this.timer = 80;
     }
     createBoard(){
         startButton.addEventListener('click', () => this.descreaseTime());
@@ -61,15 +62,15 @@ class Player {
         statsBoard.appendChild(countDown);
     }
     descreaseTime(){
-        this.timer = 200;
+        this.timer = 80;
         const time = setInterval(() => {
             console.log(time)
             this.timer --;
             this.updateStats();
-            if (this.collectedItems >=94 && this.timer >= 0){
+            if (this.collectedItems >=50 && this.timer >= 0){
                 clearInterval(time);
                 toggleWinModal();
-            }else if(this.collectedItems < 94 && this.timer <= 0){
+            }else if(this.collectedItems < 50 && this.timer <= 0){
                 clearInterval(time);
                 toggleLoseModal();
             }
@@ -89,7 +90,7 @@ class Player {
         const countDown = document.querySelector('.countDown');
         countDown.innerHTML = `
         <div class="countDown">Timer: ${this.timer} sec.</div>
-        <div class="collected">Sheets Collected: ${this.collectedItems}/94 Sheets</div>
+        <div class="collected">Sheets Collected: ${this.collectedItems}/50 Sheets</div>
         `
     }
 }
@@ -113,12 +114,12 @@ let position = 0;
 const CONTROL = (event) =>{
     event.preventDefault();
     console.log(event.keyCode);
-    if (event.keyCode === 38){
+    if(event.keyCode === 38){
         //up key (-10 of grid position)
         position-=10;
         document.querySelector(`.child${position}`).appendChild(figure);
         console.log(document.querySelector(`.child${position}`))
-        }
+    }
     if(event.keyCode === 39){
         //right key (+1 of grid position)
         position++;
@@ -153,11 +154,13 @@ const toggleLoseModal = () =>{
     loseModal.classList.toggle('hidden');
 }
 
-//Reset
+const toggleOutOfBound = () =>{
+    outOfBound.classList.toggle('hidden');
+}
 
 
 /* =============================
-    EVENT LISTENERS
+EVENT LISTENERS
 ============================= */
 
 window.addEventListener('load', GAME)
@@ -166,6 +169,7 @@ window.addEventListener('keydown', CONTROL);
 
 startButton.addEventListener('click', toggleModal)
 
+//Reset
 resetWin.addEventListener('click', function(){
     window.location.reload();
 })
