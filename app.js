@@ -20,8 +20,6 @@ for(let i=0; i < 100; i++){
     gridParent.appendChild(gridChild);
 }
 
-
-
 /* ======================
     CREATE CLASS
 =========================*/
@@ -32,9 +30,21 @@ figure.setAttribute('class', 'engineer');
 figure.innerHTML = `<img src="https://i.pinimg.com/736x/51/71/a0/5171a0091726fcd052c80a115b77d580.jpg"/>`
 startPoint.appendChild(figure);
 
+const spawnPaper = document.createElement('div');
+spawnPaper.setAttribute('class', 'paper');
+spawnPaper.innerText = '📝'
+let paper = Math.floor(Math.random()*100);
+document.querySelector(`.child${paper}`).appendChild(spawnPaper);
+
+
+const player = document.querySelector('.engineer')
+console.log(player.parentElement.getAttribute('class'))
+
+// console.log(single.parentElement.getAttribute('class'))
+
 class Player {
     constructor(name, collectedItems, timer){
-        this,name = name;
+        this.name = name;
         this.collectedItems = 0;
         this.timer = 200;
     }
@@ -56,44 +66,40 @@ class Player {
                 clearInterval(time);
                 console.log('Time Up!');
             }
-            }, 1000);
+        }, 1000);
+    }
+    increaseSheets(){
+        const single = document.querySelector('.paper')
+        if(player.parentElement.getAttribute('class') === single.parentElement.getAttribute('class')){
+            this.collectedItems++;
+            this.updateStats();
+            single.remove();
+            let paper = Math.floor(Math.random()*100);
+            document.querySelector(`.child${paper}`).appendChild(spawnPaper);
         }
-    // increaseSheets(){
-
-    // }
+    }
     updateStats(){
-
         const countDown = document.querySelector('.countDown');
         countDown.innerHTML = `
         <div class="countDown">Timer: ${this.timer} sec.</div>
         <div class="collected">Sheets Collected: ${this.collectedItems}/94 Sheets</div>
         `
-        //TIMER WORKS IN THE CONSOLE. DOES NOT REFLECT IN THE DOM//
     }
 
 }
 
-const engineer = new Player('noname');
-
+const engineer = new Player('engineer');
 /* =============================
     FUNCTIONS
 ============================= */
 
 
-//FUNCTION TO SPAWN THE SHEET OF PAPER
-const placePaper = () => {
-    let paper = Math.floor(Math.random()*100);
-    const spawnPaper = document.createElement('div');
-    spawnPaper.setAttribute('class', 'paper');
-    spawnPaper.innerText = '📝'
-    document.querySelector(`.child${paper}`).appendChild(spawnPaper);
-    
-}
+//FUNCTION TO SPAWN THE SHEET OF PAPER (Pushed up in the begining of code)
+
 //FUNCTION TO START THE GAME.
 
 const GAME = () => {
     engineer.createBoard();
-    placePaper();
 }
 
 //FUNCTION TO MOVE THE ENGINEER
@@ -125,6 +131,7 @@ const CONTROL = (event) =>{
         document.querySelector(`.child${position}`).appendChild(figure);
         console.log(document.querySelector(`.child${position}`))
     }
+    engineer.increaseSheets();
 }
 
 // FUNCTION TO START THE TIMER
