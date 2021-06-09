@@ -32,7 +32,7 @@ figure.setAttribute('class', 'engineer');
 figure.innerHTML = `<img src="https://i.pinimg.com/736x/51/71/a0/5171a0091726fcd052c80a115b77d580.jpg"/>`
 startPoint.appendChild(figure);
 
-class User {
+class Player {
     constructor(name, collectedItems, timer){
         this,name = name;
         this.collectedItems = 0;
@@ -58,6 +58,9 @@ class User {
             }
             }, 1000);
         }
+    // increaseSheets(){
+
+    // }
     updateStats(){
 
         const countDown = document.querySelector('.countDown');
@@ -70,16 +73,12 @@ class User {
 
 }
 
-const engineer = new User('noname');
+const engineer = new Player('noname');
 
 /* =============================
     FUNCTIONS
 ============================= */
 
-//FUNCTION TO START THE GAME.
-const GAME = () => {
-    engineer.createBoard();
-}
 
 //FUNCTION TO SPAWN THE SHEET OF PAPER
 const placePaper = () => {
@@ -88,7 +87,13 @@ const placePaper = () => {
     spawnPaper.setAttribute('class', 'paper');
     spawnPaper.innerText = '📝'
     document.querySelector(`.child${paper}`).appendChild(spawnPaper);
+    
+}
+//FUNCTION TO START THE GAME.
 
+const GAME = () => {
+    engineer.createBoard();
+    placePaper();
 }
 
 //FUNCTION TO MOVE THE ENGINEER

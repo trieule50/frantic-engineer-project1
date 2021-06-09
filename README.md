@@ -30,12 +30,54 @@ Refer to the project-worksheet markdown to read over the:
 ### Setting Up Core Structure
 
 #### Setting Up A Game Area
-- First, with the help of HTML, set up a container.  
+First, with the help of HTML, set up a container and loop the amount of grid to be append to the game area. Afterwards, set an attribute to the class. This attribute will be used to control / move the engineer.
+#### Setting Up A Timer
+SetInterval() is a function that allows a funation to run at a specified intervals in milliseconds. In the player class, a decrease method was created to have a countdown after the player 'click' start. 
+
+    descreaseTime(){
+        this.timer = 200;
+        const time = setInterval(() => {
+            console.log(time)
+            this.timer --;
+            this.updateStats();
+            if (this.timer === 0){
+                clearInterval(time);
+                console.log('Time Up!');
+            }
+            }, 1000);
+        }
+#### Setting Up Function to Control Engineer
+With the individual class name, append the figure to the individual div item. 
+
+    let position = 0;
+    const CONTROL = (event) =>{
+        event.preventDefault();
+        console.log(event.keyCode);
+    if (event.keyCode === 38){
+        //up key (-10 of grid position)
+        position-=10;
+        document.querySelector(`.child${position}`).appendChild(figure);
+        console.log(document.querySelector(`.child${position}`))
+        }
+    if(event.keyCode === 39){
+        //right key (+1 of grid position)
+        position++;
+        document.querySelector(`.child${position}`).appendChild(figure);
+        console.log(document.querySelector(`.child${position}`));
+        }
+        ...
+
+#### Setting Up To Spawn Papers
+
+#### Setting Up A Function to "Collect" Papers
+
+#### Setting Up A Win Logic
 
 ### Focusing on User Experience
 
 ## Problem Areas 
-- The problem area was making the engineer move.
+- First lesson learned was from setting up the function to move the engineer is that KeyDown is a global event listener (i.e. = window and not document.querySelector).
+- Second lesson learned was from setting up a function to "collect" papers.
 
 ## Future Directions
 
