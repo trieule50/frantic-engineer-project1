@@ -16,13 +16,13 @@ The overall schedule of project 1:
 ![image](https://media.git.generalassemb.ly/user/36270/files/87151c80-c79e-11eb-9408-a2f945389690)
 
 The estimated and actual schedule of day 1:
-![image](https://media.git.generalassemb.ly/user/36270/files/3225d600-c79f-11eb-9b7b-32e66e938a0b)
+![image](https://media.git.generalassemb.ly/user/36270/files/55e34a80-c95e-11eb-94e7-0d05022a096b)
 
 The estimated and actual schedule of day 2:
 ![image](https://media.git.generalassemb.ly/user/36270/files/481ebe00-c8a7-11eb-9ba4-c101c0417b17)
 
 The estimated and actual schedule of day 3:
-![image](https://media.git.generalassemb.ly/user/36270/files/fa648d00-c95c-11eb-8554-3de124217196)
+![image](https://media.git.generalassemb.ly/user/36270/files/609ddf80-c95e-11eb-842f-974090e4f8ce)
 
 ## User Stories
 
