@@ -86,15 +86,24 @@ The logic used to create the function to "collect" papers was that if the engine
 
 #### Setting Up A Win Logic
 
-Frantic engineer is a game against the clock. To win, the player will need to collect all 94 sheets within the 200 seconds. 
+Frantic engineer is a game against the clock. To win, the player will need to collect all 50 sheets within the 80 seconds. 
+
+    if (this.collectedItems >=50 && this.timer >= 0){
+                clearInterval(time);
+                toggleWinModal();
+            }else if(this.collectedItems < 50 && this.timer <= 0){
+                clearInterval(time);
+                toggleLoseModal();
+            }
 
 ### Focusing on User Experience
+With the mindset of "mobile first" elements are stacked in the game. 
 
 
 ## Problem Areas 
 - First lesson learned was from setting up the function to move the engineer is that KeyDown is a global event listener (i.e. = window and not document.querySelector).
 - Second lesson learned was from setting up a function to "collect" papers. The main issue was to understand the type of event listener that was attached to a function. For instance, the 'collect function was on the 'window load' which invoke the function everytime the window load. 
-- Third lesson learned was understanding the edge condition. 
+- Third lesson learned was understanding the edge condition. Writing an if statement to capture all condition for example, out of bound conditions. 
 
 ## Future Directions
 

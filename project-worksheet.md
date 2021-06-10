@@ -21,6 +21,9 @@ The estimated and actual schedule of day 1:
 The estimated and actual schedule of day 2:
 ![image](https://media.git.generalassemb.ly/user/36270/files/481ebe00-c8a7-11eb-9ba4-c101c0417b17)
 
+The estimated and actual schedule of day 3:
+![image](https://media.git.generalassemb.ly/user/36270/files/fa648d00-c95c-11eb-8554-3de124217196)
+
 ## User Stories
 
 1. As a player, I want a two player game, either with the computer or another player, so that the game is a challenge.

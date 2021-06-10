@@ -85,7 +85,7 @@ p{
     font-family: 'Press Start 2P', sans-serif;
     background-color: steelblue;
 }
-.resetWin:hover, .resetLose:hover, .resetOutOfBound{
+.resetWin:hover, .resetLose:hover, .resetOutOfBound:hover{
     background-color: rgb(202, 69, 69);
     animation: shake .5s infinite;
 }
