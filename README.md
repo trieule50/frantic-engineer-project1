@@ -97,7 +97,7 @@ Frantic engineer is a game against the clock. To win, the player will need to co
             }
 
 ### Focusing on User Experience
-With the mindset of "mobile first" elements are stacked in the game. 
+With the mindset of "mobile first" elements are stacked in the game. One of the concerns was making the modal center to the page. By @media a min width of 768. The game is centered to an i-Pad to a desktop. 
 
 
 ## Problem Areas 
@@ -106,6 +106,8 @@ With the mindset of "mobile first" elements are stacked in the game.
 - Third lesson learned was understanding the edge condition. Writing an if statement to capture all condition for example, out of bound conditions. 
 
 ## Future Directions
+- One of my stretch goal was to have the collected papers append to the engineers.
+- Create a more responsive app for all size mobile devices. 
 
 ## Accomplishments 
 - Frantic Engineer is a functionally game! 
@@ -113,3 +115,5 @@ With the mindset of "mobile first" elements are stacked in the game.
 
 ## Citation
 [History of Snake](https://www.itsnicethat.com/features/taneli-armanto-the-history-of-snake-design-legacies-230221)
+[Blueprint PNG](https://www.subpng.com/png-d1xs5s/)
+[Engineer PNG](https://www.pinterest.com/leojackmystic7/engineer-cartoon/)

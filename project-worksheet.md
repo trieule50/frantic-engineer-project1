@@ -24,6 +24,8 @@ The estimated and actual schedule of day 2:
 The estimated and actual schedule of day 3:
 ![image](https://media.git.generalassemb.ly/user/36270/files/609ddf80-c95e-11eb-842f-974090e4f8ce)
 
+The estimated and actual schedule of day 4:
+
 ## User Stories
 
 1. As a player, I want a two player game, either with the computer or another player, so that the game is a challenge.
@@ -46,12 +48,13 @@ The estimated and actual schedule of day 3:
 
 ## MVP 
 1. Create a win logic
-    (Win = collect all the papers before time runs out.)
-2. Create Grid Display
-3. Create Classes
-4. Styling Games
-5. Creating Modal
-6. interactive in DOM
+    Win = collect all the papers before time runs out. (Completed, Refer to the README)
+2. Create Grid Display (Completed, Refer to the README)
+3. Create Classes (Completed, Refer to the README)
+4. Styling Games (Completed, Refer to the README)
+5. Creating Modal (Completed, Refer to the README)
+6. interactive in DOM (Completed, Refer to the README)
+    
 
 
 ## Post-MVP / Stretch Goals

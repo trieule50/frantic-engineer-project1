@@ -7,7 +7,9 @@
     <title>Frantic Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <script defer src="app.js"></script>
 </head>
 <body>
@@ -17,27 +19,26 @@
     <div class='modal'>
         <div class='modal_contents'>
             <h2 class="instruction">Instruction</h2>
-            <p>You, as an engineer, is getting ready to bid on a project. To be able to submit a bid on time, you are in charge of collecting sheets of bid proposals. Be sure to watch out for obstacles that will make you lose the sheets. <br> Press the corresponding arrow key to get to the sheets. Best of luck!</p>
+            <p>You, as an engineer, is getting ready to bid on a project. <br>  To be able to submit a bid on time, you are in charge of collecting sheets of bid proposals. <br> Press the corresponding arrow key to get to the sheets. <br> Best of luck!</p>
             <button class="startButton">START</button>
         </div>
     </div>
     <div class='winModal hidden'>
         <div class='winModal_contents'>
             <h2 class="win">🎉You win!🎉</h2>
-            <p>🎉You have collected all the sheets and submit the proposal on time! This resulted in your company winning the bid!🎉 <br> Play again?</p>
+            <p>You have collected all the sheets and submit the proposal on time! This resulted in your company winning the bid! <br> Play again?</p>
             <button class="resetWin">RESTART</button>
         </div>
     </div>
     <div class='loseModal hidden'>
         <div class='loseModal_contents'>
             <h2 class="lose">😰You lose!😰</h2>
-            <p>This resulted in your company losing the bid<br> Play again?</p>
+            <p>You didn't collect enough sheets. This resulted in your company losing the bid<br> Play again?</p>
             <button class="resetLose">RESTART</button>
         </div>
     </div>
     <div class='outOfBoundModal hidden'>
         <div class='outOfBoundModal_contents'>
-            <h2 class="outOfBound">You lose!</h2>
             <p>You went out of bound.<br> Play again?</p>
             <button class="resetOutOfBound">RESTART</button>
         </div>

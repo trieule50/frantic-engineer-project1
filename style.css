@@ -1,52 +1,78 @@
 body{
     text-align: center;
-    font-family: 'Press Start 2P', sans-serif;
+    font-family: 'Luckiest Guy', sans-serif;
+    /* font-family: 'Press Start 2P', sans-serif; */
     background-image: url('https://t4.ftcdn.net/jpg/03/02/11/35/360_F_302113529_3ze1r8JC3FnMuQfnY18fOSCIu1sQrZFk.jpg');
 }
 h1{
     background-color: rgb(76, 194, 127);
+    font-size: 35px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    font-family: 'Luckiest Guy', sans-serif;
+    padding: 10px;
+    text-align: center;
 }
 
 p{
     line-height: 24px;;
 }
 .statsBoard{
-    padding: 25px;
+    padding: 5px;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .modal, .winModal{
     position: absolute;
-    height: 300px;
-    width: 750px;
+    height: 250px;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     display: flex;
     margin-top: 200px;
     justify-content: center;
     align-content: center;
     border: 5px solid slateblue;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .loseModal{
     position: absolute;
     top: 0;
-    height: 300px;
-    width: 700px;
+    height: 200px;
+    width: 750px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     margin-top: 200px;
     justify-content: center;
     align-content: center;
     border: 5px solid slateblue;
+    background-color: white;
+    font-size: 10px;
 }
 .outOfBoundModal{
     position: absolute;
     top: 0;
-    height: 300px;
-    width: 700px;
+    height: 200px;
+    width: 750px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     margin-top: 200px;
     justify-content: center;
     align-content: center;
     border: 5px solid slateblue;
+    background-color: white;
+    font-size: 10px;
 }
 .modal_contents, .winModal_contents, .loseModal_contents, .outOfBoundModal_contents {
     background-color: white;
@@ -67,10 +93,10 @@ p{
 }
 
 .startButton{
-    height: 50px;
+    height: 45px;
     width: 120px;
-    font-size: 20px;
-    font-family: 'Press Start 2P', sans-serif;
+    font-size: 18px;
+    font-family: 'Luckiest Guy', sans-serif;
     background-color: rgb(28, 147, 245);
 }
 .startButton:hover{
@@ -79,10 +105,10 @@ p{
 }
 
 .resetWin, .resetLose, .resetOutOfBound{
-    height: 50px;
+    height: 45px;
     width: 150px;
-    font-size: 20px;
-    font-family: 'Press Start 2P', sans-serif;
+    font-size: 18px;
+    font-family: 'Luckiest Guy', sans-serif;
     background-color: steelblue;
 }
 .resetWin:hover, .resetLose:hover, .resetOutOfBound:hover{
@@ -117,16 +143,38 @@ p{
     grid-template-rows: repeat(10, 50px);
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 
-.paper{
-    font-size: 30px;
+.paper img{
+    max-width: 45px;
+    max-height: 45px;
 }
 
 .child{
     width: 50px;
     height: 50px;
-    background-color: rgb(246, 246, 246);
-    opacity: 90%;
+    background-color: rgb(238, 238, 238);
     /* border: 1px solid black; */
+}
+
+@media (min-width: 768px){
+    .modal, .winModal, .outOfBoundModal{
+        height: 275px;
+        width: 750px;
+        font-size: 18px;
+    }
+    .loseModal, .outOfBoundModal{
+        font-size: 24px;
+        height: 275px;
+        width: 750px;
+    }
+    h1{
+        font-size: 40px;
+    }
+}
+
+.child0, .child2, .child4, .child6, .child8, .child11, .child13, .child15, .child17, .child19, .child20, .child22, .child24, .child26, .child28, .child31, .child33, .child35, .child37, .child39, .child40, .child42, .child44, .child46, .child48, .child51, .child53, .child55, .child57, .child59, .child60, .child62, .child64, .child66, .child68, .child71, .child73, .child75, .child77, .child79, .child80, .child82, .child84, .child86, .child88, .child91, .child93, .child95, .child97, .child99 {
+    background-color: rgb(246, 246, 246);
+
 }

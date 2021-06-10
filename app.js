@@ -33,12 +33,12 @@ for(let i=0; i < 100; i++){
 const startPoint = document.querySelector('.child');
 const figure = document.createElement('div');
 figure.setAttribute('class', 'engineer');
-figure.innerHTML = `<img src="https://i.pinimg.com/736x/51/71/a0/5171a0091726fcd052c80a115b77d580.jpg"/>`
+figure.innerHTML = `<img src="https://i.pinimg.com/474x/b1/21/08/b121080d1ca8f515097b4d7e0a2a9de9.jpg"/>`
 startPoint.appendChild(figure);
 
 const spawnPaper = document.createElement('div');
 spawnPaper.setAttribute('class', 'paper');
-spawnPaper.innerText = '📝'
+spawnPaper.innerHTML = '<img src="https://mpng.subpng.com/20190402/rlv/kisspng-blueprint-architecture-clip-art-design-vector-grap-engineer-blue-print-transparent-amp-png-clipart-5ca40ebe718cd3.2540482515542555504651.jpg"/>'
 let paper = Math.floor(Math.random()*100);
 document.querySelector(`.child${paper}`).appendChild(spawnPaper);
 
@@ -68,12 +68,12 @@ class Player {
             console.log(time)
             this.timer --;
             this.updateStats();
-            if (this.collectedItems >=50 && this.timer >= 0){
-                clearInterval(time);
+            if (engineer.collectedItems >=50 && engineer.timer >= 0){
                 toggleWinModal();
-            }else if(this.collectedItems < 50 && this.timer <= 0){
                 clearInterval(time);
+            }else if(engineer.collectedItems < 50 && engineer.timer <= 0){
                 toggleLoseModal();
+                clearInterval(time);
             }
         }, 1000);
     }
@@ -112,6 +112,9 @@ const GAME = () => {
 
 const toggleOutOfBound = () =>{
     outOfBound.classList.toggle('hidden');
+    engineer.timer = 0;
+    engineer.collectedItems = 0;
+    player.remove();
 }
 
 //FUNCTION TO MOVE THE ENGINEER
