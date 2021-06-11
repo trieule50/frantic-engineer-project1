@@ -10,7 +10,7 @@ Frantic Engineer is about an engineer who is getting ready to bid on a project. 
 
 Can you help the engineer in submitting the bid proposal on time?
 
-**Link to site:** WILL ADD AFTER HTML HAS BEEN CREATED
+**Link to site:** https://trieule50.github.io/frantic-engineer-project1/
 
 ### Programs Used:
 - HTML
@@ -107,13 +107,13 @@ With the mindset of "mobile first" elements are stacked in the game. One of the 
 
 ## Future Directions
 - One of my stretch goal was to have the collected papers append to the engineers.
-- Create a more responsive app for all size mobile devices. 
+- Create a more responsive app for all size mobile devices. As of now, this is a desktop game, that works with keypress. 
 
 ## Accomplishments 
 - Frantic Engineer is a functionally game! 
 - Understand the importance of scope. 
 
 ## Citation
-[History of Snake](https://www.itsnicethat.com/features/taneli-armanto-the-history-of-snake-design-legacies-230221)
-[Blueprint PNG](https://www.subpng.com/png-d1xs5s/)
-[Engineer PNG](https://www.pinterest.com/leojackmystic7/engineer-cartoon/)
+- [History of Snake](https://www.itsnicethat.com/features/taneli-armanto-the-history-of-snake-design-legacies-230221)
+- [Blueprint PNG](https://www.subpng.com/png-d1xs5s/)
+- [Engineer PNG](https://www.pinterest.com/leojackmystic7/engineer-cartoon/)

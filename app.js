@@ -20,7 +20,7 @@ const resetOutOfBound = document.querySelector('.resetOutOfBound');
 
 //For Loop to create div child grid//
 
-for(let i=0; i < 100; i++){
+for(let i=1; i < 101; i++){
     const gridChild = document.createElement('div');
     gridChild.setAttribute('class', `child child${i}`)
     gridParent.appendChild(gridChild);
@@ -44,15 +44,13 @@ document.querySelector(`.child${paper}`).appendChild(spawnPaper);
 
 
 const player = document.querySelector('.engineer')
-console.log(player.parentElement.getAttribute('class'))
-
-// console.log(single.parentElement.getAttribute('class'))
 
 class Player {
     constructor(name, collectedItems, timer){
         this.name = name;
         this.collectedItems = 0;
         this.timer = 80;
+        this.time;
     }
     createBoard(){
         startButton.addEventListener('click', () => this.descreaseTime());
@@ -62,20 +60,24 @@ class Player {
         `
         statsBoard.appendChild(countDown);
     }
+
     descreaseTime(){
         this.timer = 80;
-        const time = setInterval(() => {
-            console.log(time)
+        this.time = setInterval(() => {
             this.timer --;
             this.updateStats();
             if (engineer.collectedItems >=50 && engineer.timer >= 0){
                 toggleWinModal();
-                clearInterval(time);
+                clearInterval(this.time);
             }else if(engineer.collectedItems < 50 && engineer.timer <= 0){
                 toggleLoseModal();
-                clearInterval(time);
+                clearInterval(this.time);
             }
         }, 1000);
+    }
+    resetTime(){
+        this.timer = 80;
+        clearInterval(this.time);
     }
     increaseSheets(){
         const single = document.querySelector('.paper')
@@ -83,7 +85,7 @@ class Player {
             this.collectedItems++;
             this.updateStats();
             single.remove();
-            let paper = Math.floor(Math.random()*100);
+            let paper = Math.floor(Math.random()*101);
             document.querySelector(`.child${paper}`).appendChild(spawnPaper);
         }
     }
@@ -105,27 +107,27 @@ const engineer = new Player('engineer');
 //FUNCTION TO SPAWN THE SHEET OF PAPER (Pushed up in the begining of code)
 
 //FUNCTION TO START THE GAME.
-
 const GAME = () => {
     engineer.createBoard();
 }
 
-const toggleOutOfBound = () =>{
-    outOfBound.classList.toggle('hidden');
-    engineer.timer = 0;
-    engineer.collectedItems = 0;
-    player.remove();
+//FUNCTION TO ENDGAME
+const ENDGAME = () =>{
+    window.removeEventListener('keydown', CONTROL);
+    window.removeEventListener('load', GAME)
 }
 
 //FUNCTION TO MOVE THE ENGINEER
-let position = 0;
+let position = 1;
 const CONTROL = (event) =>{
     event.preventDefault();
     console.log(event.keyCode);
     //up key (-10 of grid position)
     if(event.keyCode === 38){
-        if(position >=0 && position <=10){
+        if(position >0 && position <=10){
             toggleOutOfBound();
+            ENDGAME();
+            engineer.resetTime();
         }else{
             position-=10;
             document.querySelector(`.child${position}`).appendChild(figure);
@@ -134,8 +136,10 @@ const CONTROL = (event) =>{
     }
     //right key (+1 of grid position)
     if(event.keyCode === 39){
-        if((position+1) % 10 === 0){
+        if(position % 10 === 0){
             toggleOutOfBound();
+            ENDGAME();
+            engineer.resetTime();
         }else{
             position++;
             document.querySelector(`.child${position}`).appendChild(figure);
@@ -146,6 +150,8 @@ const CONTROL = (event) =>{
     if(event.keyCode === 40){
         if(position >= 90 && position <=100){
             toggleOutOfBound();
+            ENDGAME();
+            engineer.resetTime();
         }else{
             position+=10;
             document.querySelector(`.child${position}`).appendChild(figure);
@@ -154,8 +160,10 @@ const CONTROL = (event) =>{
     }
     //left key (-1 of grid position)
     if(event.keyCode === 37){
-        if(position % 10 === 0){
+        if((position-1) % 10 === 0){
             toggleOutOfBound();
+            ENDGAME();
+            engineer.resetTime();
         }else{
             position--;
             document.querySelector(`.child${position}`).appendChild(figure);
@@ -178,6 +186,18 @@ const toggleLoseModal = () =>{
     loseModal.classList.toggle('hidden');
 }
 
+const toggleOutOfBound = () =>{
+    outOfBound.classList.toggle('hidden');
+}
+
+//Function to reset game
+
+const initializedGame = () =>{
+    startPoint.appendChild(figure)
+    position = 1;
+    engineer.timer = 80;
+    engineer.collectedItems = 0;
+}
 
 /* =============================
 EVENT LISTENERS
@@ -189,15 +209,26 @@ window.addEventListener('keydown', CONTROL);
 
 startButton.addEventListener('click', toggleModal)
 
-//Reset
+//Reset Button Listeners
 resetWin.addEventListener('click', function(){
-    window.location.reload();
+    initializedGame();
+    toggleWinModal();
+    toggleModal();
 })
 
 resetLose.addEventListener('click', function(){
-    window.location.reload();
+    initializedGame();
+    toggleLoseModal();
+    toggleModal();
 })
 
 resetOutOfBound.addEventListener('click', function(){
-    window.location.reload();
+    toggleOutOfBound();
+    window.addEventListener('keydown', CONTROL)
+    toggleModal();
+    initializedGame();
+    window.addEventListener('load', GAME)
+    engineer.resetTime();
 })
+
+// window.location.reload();

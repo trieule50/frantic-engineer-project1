@@ -39,7 +39,7 @@ p{
     justify-content: center;
     align-content: center;
     border: 5px solid slateblue;
-    font-size: 12px;
+    font-size: 15px;
     background-color: white;
     border-radius: 5px;
 }
@@ -57,7 +57,7 @@ p{
     align-content: center;
     border: 5px solid slateblue;
     background-color: white;
-    font-size: 10px;
+    font-size: 15px;
 }
 .outOfBoundModal{
     position: absolute;
@@ -72,7 +72,7 @@ p{
     align-content: center;
     border: 5px solid slateblue;
     background-color: white;
-    font-size: 10px;
+    font-size: 20px;
 }
 .modal_contents, .winModal_contents, .loseModal_contents, .outOfBoundModal_contents {
     background-color: white;
@@ -174,7 +174,7 @@ p{
     }
 }
 
-.child0, .child2, .child4, .child6, .child8, .child11, .child13, .child15, .child17, .child19, .child20, .child22, .child24, .child26, .child28, .child31, .child33, .child35, .child37, .child39, .child40, .child42, .child44, .child46, .child48, .child51, .child53, .child55, .child57, .child59, .child60, .child62, .child64, .child66, .child68, .child71, .child73, .child75, .child77, .child79, .child80, .child82, .child84, .child86, .child88, .child91, .child93, .child95, .child97, .child99 {
+.child2, .child4, .child6, .child8, .child10, .child11, .child13, .child15, .child17, .child19, .child22, .child24, .child26, .child28, .child30, .child31, .child33, .child35, .child37, .child39, .child42, .child44, .child46, .child48, .child50, .child51, .child53, .child55, .child57, .child59, .child62, .child64, .child66, .child68, .child70, .child71, .child73, .child75, .child77, .child79, .child82, .child84, .child86, .child88, .child90, .child91, .child93, .child95, .child97, .child99 {
     background-color: rgb(246, 246, 246);
 
 }
