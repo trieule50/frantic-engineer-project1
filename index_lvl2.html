@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frantic Engineer - Level 1</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Frantic Engineer - Level 2</title>
+    <link rel="stylesheet" href="style_lvl2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <script defer src="app.js"></script>
+    <script defer src="app_lvl2.js"></script>
 </head>
 <body>
-    <h1>FRANTIC ENGINEER - Level 1</h1>
+    <h1>FRANTIC ENGINEER - Level 2</h1>
     <div class="parent">
     </div>
     <div class='modal'>
         <div class='modal_contents'>
             <h2 class="instruction">Instruction</h2>
-            <p>You, as an engineer, is getting ready to bid on a project. <br>  To be able to submit a bid on time, you are in charge of collecting sheet of bid proposals. <br> Press the corresponding arrow key to get to the sheet. <br> Best of luck!</p>
+            <p>You did such a great job last time. The project manager asked you to help out again but you now have 70 sec! <br> Press the corresponding arrow key to get to the sheets. <br> Best of luck!</p>
             <button class="startButton">START</button>
         </div>
     </div>
     <div class='winModal hidden'>
         <div class='winModal_contents'>
             <h2 class="win">🎉You win!🎉</h2>
-            <p>You have collected all the sheets and submit the proposal on time! This resulted in your company winning the bid! <br> Play again?</p>
-            <button class="resetWin">RESTART</button>
-            <button class="nextlevel">Next Level</button>
+            <p>Congratuation! The project manager was very happy and you got promoted! <br> Play again?</p>
+            <button class="resetWin">Restart</button>
         </div>
     </div>
     <div class='loseModal hidden'>
         <div class='loseModal_contents'>
             <h2 class="lose">😰You lose!😰</h2>
-            <p>Times Up! You didn't collect enough sheets. This resulted in your company losing the bid<br> Play again?</p>
-            <button class="resetLose">RESTART</button>
+            <p>Times Up! You didn't collect enough sheets. This resulted in your company losing the bid. The project manager has requested you try again.<br> Play Again?</p>
+            <button class="resetLose">Restart</button>
         </div>
     </div>
     <div class='outOfBoundModal hidden'>

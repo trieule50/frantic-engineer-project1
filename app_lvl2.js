@@ -17,7 +17,6 @@ const resetWin = document.querySelector('.resetWin');
 const resetLose = document.querySelector('.resetLose');
 const outOfBound = document.querySelector('.outOfBoundModal');
 const resetOutOfBound = document.querySelector('.resetOutOfBound');
-const nextLevel = document.querySelector('.nextlevel');
 
 //For Loop to create div child grid//
 
@@ -50,7 +49,7 @@ class Player {
     constructor(name, collectedItems, timer){
         this.name = name;
         this.collectedItems = 0;
-        this.timer = 80;
+        this.timer = 70;
         this.time;
     }
     createBoard(){
@@ -63,7 +62,7 @@ class Player {
     }
 
     descreaseTime(){
-        this.timer = 80;
+        this.timer = 70;
         this.time = setInterval(() => {
             this.timer --;
             this.updateStats();
@@ -77,7 +76,7 @@ class Player {
         }, 1000);
     }
     resetTime(){
-        this.timer = 80;
+        this.timer = 70;
         clearInterval(this.time);
     }
     increaseSheets(){
@@ -209,10 +208,6 @@ window.addEventListener('load', GAME)
 window.addEventListener('keydown', CONTROL);
 
 startButton.addEventListener('click', toggleModal)
-
-nextLevel.addEventListener('click', function(){
-    window.location.href = 'index_lvl2.html'
-})
 
 //Reset Button Listeners
 resetWin.addEventListener('click', function(){

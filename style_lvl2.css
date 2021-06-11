@@ -2,7 +2,7 @@ body{
     text-align: center;
     font-family: 'Luckiest Guy', sans-serif;
     /* font-family: 'Press Start 2P', sans-serif; */
-    background-image: url('https://t4.ftcdn.net/jpg/03/02/11/35/360_F_302113529_3ze1r8JC3FnMuQfnY18fOSCIu1sQrZFk.jpg');
+    background-image: url('https://img.freepik.com/free-vector/cartoon-illustration-modern-conference-hall-room-meetings-business-trainings_1441-2076.jpg?size=626&ext=jpg');
 }
 h1{
     background-color: rgb(76, 194, 127);
@@ -39,7 +39,7 @@ p{
     justify-content: center;
     align-content: center;
     border: 5px solid slateblue;
-    font-size: 15px;
+    font-size: 12px;
     background-color: white;
     border-radius: 5px;
 }
@@ -57,7 +57,7 @@ p{
     align-content: center;
     border: 5px solid slateblue;
     background-color: white;
-    font-size: 15px;
+    font-size: 10px;
 }
 .outOfBoundModal{
     position: absolute;
@@ -72,7 +72,7 @@ p{
     align-content: center;
     border: 5px solid slateblue;
     background-color: white;
-    font-size: 20px;
+    font-size: 10px;
 }
 .modal_contents, .winModal_contents, .loseModal_contents, .outOfBoundModal_contents {
     background-color: white;
@@ -92,14 +92,14 @@ p{
     transition: .75s;
 }
 
-.startButton, .nextlevel{
+.startButton{
     height: 45px;
     width: 120px;
     font-size: 18px;
     font-family: 'Luckiest Guy', sans-serif;
     background-color: rgb(28, 147, 245);
 }
-.startButton:hover, .nextlevel:hover{
+.startButton:hover{
     animation: shake .5s infinite;
     background-color: rgb(76, 194, 127);
 }

@@ -6,7 +6,7 @@ Inspired by the snake game.
 
 Snake was first launched in 1997 on the Nokia 6110 and became the second mobile game after Tetris. Frantic Engineer was inspired by snake and my previous career. 
 
-Frantic Engineer is about an engineer who is getting ready to bid on a project. However, in order to submit the bid on time, all the proposal sheets will need to be collected. To make it even more difficult, there are obstacles that the engineer could run into making them lose all their sheets!
+Frantic Engineer is about an engineer who is getting ready to bid on a project. However, in order to submit the bid on time, all the proposal sheets will need to be collected.
 
 Can you help the engineer in submitting the bid proposal on time?
 
@@ -47,7 +47,7 @@ SetInterval() is a function that allows a funation to run at a specified interva
             }, 1000);
         }
 #### Setting Up Function to Control Engineer
-With the individual class name, append the figure to the individual div item. 
+With the individual class name, append the figure to the individual div item. Since the board is a 10x10 grid, all horizontal movement was plus or minus one and vertical movement was plus or minus 10. With that logic, the engineer can be append to each div. 
 
     let position = 0;
     const CONTROL = (event) =>{
