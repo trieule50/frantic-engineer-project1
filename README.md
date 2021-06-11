@@ -104,6 +104,10 @@ With the mindset of "mobile first" elements are stacked in the game. One of the 
 - First lesson learned was from setting up the function to move the engineer is that KeyDown is a global event listener (i.e. = window and not document.querySelector).
 - Second lesson learned was from setting up a function to "collect" papers. The main issue was to understand the type of event listener that was attached to a function. For instance, the 'collect function was on the 'window load' which invoke the function everytime the window load. 
 - Third lesson learned was understanding the edge condition. Writing an if statement to capture all condition for example, out of bound conditions. 
+- Four lesson learned was that edge cases are the difficult.
+    Couple of edge classes that I encounter:
+    - Setting up the board game boundary
+    - Clearing out the set intervals
 
 ## Future Directions
 - One of my stretch goal was to have the collected papers append to the engineers.

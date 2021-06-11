@@ -25,6 +25,7 @@ The estimated and actual schedule of day 3:
 ![image](https://media.git.generalassemb.ly/user/36270/files/609ddf80-c95e-11eb-842f-974090e4f8ce)
 
 The estimated and actual schedule of day 4:
+![image](https://media.git.generalassemb.ly/user/36270/files/7a5a2800-ca2d-11eb-88b3-a8f184b03fef)
 
 ## User Stories
 
